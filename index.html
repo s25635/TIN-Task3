@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<h1>Pokemon Database</h1>
+
+<div id="pokemon-info">
+
+<img src="images/pikachu.png" alt="Pikachu" id="pokemon-image" width="150">
+
+    <p><strong>Name:</strong> <span id="pokemon-name">Pikachu</span></p>
+    <p><strong>Type:</strong> <span id="pokemon-type">Electric</span></p>
+    <p><strong>Level:</strong> <span id="pokemon-level">20</span></p>
+    <p><strong>Description:</strong> <span id="pokemon-desc">Pikachu is an electrifying Pokémon at a petite height, Pikachu is covered in bright yellow fur, with large, expressive eyes and distinctive pointy ears. Its round, rosy cheeks are not just cute but also store electric energy, giving Pikachu its signature move, Thunderbolt.</span></p>
+    <button onclick="toggleEditForm()">Edit</button>
+</div>
+
+<div id="edit-form" style="display: none;">
+    <form id="pokemon-form" onsubmit="return saveChanges()">
+        <label for="image">Image URL:</label>
+        <!-- Use a relative path for the image input field -->
+        <input type="text" id="image" name="image" value="images/pikachu.jpg" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" required>
+
+        <label for="level">Level:</label>
+        <input type="number" id="level" name="level" required>
+
+        <label for="desc">Description:</label>
+        <input type="text" id="desc" name="desc" required>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
